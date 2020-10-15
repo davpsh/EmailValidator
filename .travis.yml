@@ -30,7 +30,7 @@ matrix:
       dist: bionic
 
 install:
-  - composer self-update
+  - composer self-update -vvv
   - if [ "$deps" = "low" ]; then composer update --prefer-lowest; else composer install; fi
   - if [ "$psalm" = "yes" ]; then composer require --dev vimeo/psalm; fi
 
